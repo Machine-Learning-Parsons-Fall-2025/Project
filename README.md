@@ -3,7 +3,8 @@ ML Final Project
 Nichos Mol,nar 2025
 
 ## Ideas:
-![/Kamon_Example.jpg](Kamon Example - Toyotomi Clan)
+
+![Kamon Example - Toyotomi Clan](https://github.com/Machine-Learning-Parsons-Fall-2025/Project/blob/14b81d587e6fdb0950bf89d2d09328bee142b381/Kamon_Example.png)
 **Japanese Kamon**:
 - How does an untrained/unfamiliar person view Kamon?
 - Japanese crests/emblem (Kamon) representing individuals or families (historically)
@@ -17,8 +18,10 @@ Nichos Mol,nar 2025
     - https://www.kaggle.com/datasets/bachrr/mon-white-224
     - https://huggingface.co/datasets/kenthorvath/japanese-kamons
 
+
+<br>
 **Revolutionary Faces**
-![https://github.com/nmolnar-parsons/revperiod_portraitfaces/blob/274fe68a33b4cafc0bb7142505a5f3c3b71087cd/Cropped_Faces/Image_0_face_0.jpg](George Washington)
+![George Washington](https://github.com/nmolnar-parsons/revperiod_portraitfaces/blob/274fe68a33b4cafc0bb7142505a5f3c3b71087cd/Cropped_Faces/Image_0_face_0.jpg)
 - How did artists depict eyes (or more generally, fatial features) in the post-revolutionary period of American History?
 - Sense/extract facial features from revolutionary portraits -> unsupervised learning? 
 - Building on a revolutionary period dataset used in MSDV Major Studio 1 (full dataset not linked here)
