@@ -12,11 +12,12 @@ Nichos Mol,nar 2025
   - kamon are traditionally classified by type (plant, animal, nature, tool, vehicle, building, etc)
   - motifs have specific meaning, and some are more popular than others
 - A kamon dataset is ripe for machine learning techniques!
-- pipe dream: enrich image dataset with historical/geographic context
+- Kamon datasets exist, and should be pretty easy to combine. However, these datasets are context sparse - dataset builders were likely more interested in the images themselves than the historical associations of each mon. 
+  - pipe dream: enrich image dataset with historical/geographic context
   - example datasets:
-    - Scrape here: https://kamondb.com/letter/45/
-    - https://www.kaggle.com/datasets/bachrr/mon-white-224
-    - https://huggingface.co/datasets/kenthorvath/japanese-kamons
+    - Scrape here: https://kamondb.com/letter/45/ (unknown how large)
+    - https://www.kaggle.com/datasets/bachrr/mon-white-224 (6425 total, 224x224 image size)
+    - https://huggingface.co/datasets/kenthorvath/japanese-kamons (408 kamon)
 
 
 <br></br>
@@ -27,6 +28,7 @@ Nichos Mol,nar 2025
 - Sense/extract facial features from revolutionary portraits -> unsupervised learning? 
 - Building on a revolutionary period dataset used in MSDV Major Studio 1 (full dataset not linked here)
   - subset here: https://github.com/nmolnar-parsons/revperiod_portraitfaces
+  - dataset size: between 158 and 3000+ images, depending on cleaning. Likely to be somewhere around 300 images once silhouettes that are classified as portraits are removed
 
 
 **Something to do with mapping**
