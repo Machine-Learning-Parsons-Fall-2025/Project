@@ -19,8 +19,9 @@ Nichos Mol,nar 2025
     - https://huggingface.co/datasets/kenthorvath/japanese-kamons
 
 
-<br>
+<br></br>
 **Revolutionary Faces**
+
 ![George Washington](https://github.com/nmolnar-parsons/revperiod_portraitfaces/blob/274fe68a33b4cafc0bb7142505a5f3c3b71087cd/Cropped_Faces/Image_0_face_0.jpg)
 - How did artists depict eyes (or more generally, fatial features) in the post-revolutionary period of American History?
 - Sense/extract facial features from revolutionary portraits -> unsupervised learning? 
