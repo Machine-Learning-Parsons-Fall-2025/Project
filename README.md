@@ -33,3 +33,13 @@ Nichos Mol,nar 2025
 
 **Something to do with mapping**
 - not sure what this would be yet, but I like maps/geographical data 11/7/25
+
+
+
+## Process:
+Sticking with the Kamon dataset (scraped from KamonDB (https://kamondb.com) using Requests and BeautifulSoup4), I forged onwards. As of 11/17/2025, I have scraped and translated (using googletrans library) from Japanese to English 5360 total Kamon. Next steps:
+- edge detection from Week 4
+  - ideally to find similar shapes/patterns across Kamon categories
+- Radial sampling/polar coordinate sampling (suggested by Thiago)
+- combining text and image data? is this possible?
+This dataset is entirely image and text. We have worked with image previously and are working with textual datasets in this week (11/17). 
