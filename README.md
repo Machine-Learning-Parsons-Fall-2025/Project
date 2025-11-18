@@ -43,3 +43,9 @@ Sticking with the Kamon dataset (scraped from KamonDB (https://kamondb.com) usin
 - Radial sampling/polar coordinate sampling (suggested by Thiago)
 - combining text and image data? is this possible?
 This dataset is entirely image and text. We have worked with image previously and are working with textual datasets in this week (11/17). 
+
+- opencv for computer vision stuff
+  - sift or search
+    - finds features in image that are "descriptive"
+- feature extraction
+- blob (points become features)
