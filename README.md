@@ -20,20 +20,6 @@ Nichos Mol,nar 2025
     - https://huggingface.co/datasets/kenthorvath/japanese-kamons (408 kamon)
 
 
-<br></br>
-**Revolutionary Faces**
-
-![George Washington](https://github.com/nmolnar-parsons/revperiod_portraitfaces/blob/274fe68a33b4cafc0bb7142505a5f3c3b71087cd/Cropped_Faces/Image_0_face_0.jpg)
-- How did artists depict eyes (or more generally, fatial features) in the post-revolutionary period of American History?
-- Sense/extract facial features from revolutionary portraits -> unsupervised learning? 
-- Building on a revolutionary period dataset used in MSDV Major Studio 1 (full dataset not linked here)
-  - subset here: https://github.com/nmolnar-parsons/revperiod_portraitfaces
-  - dataset size: between 158 and 3000+ images, depending on cleaning. Likely to be somewhere around 300 images once silhouettes that are classified as portraits are removed
-
-
-**Something to do with mapping**
-- not sure what this would be yet, but I like maps/geographical data 11/7/25
-
 
 
 ## Process:
@@ -51,7 +37,6 @@ This dataset is entirely image and text. We have worked with image previously an
 - blob (points become features)
 
 
-## copied from other Project-OpenCV fork:
 ### Progress Made:
 
 - Imported images and started to process with openCV
@@ -67,5 +52,43 @@ Trying to use openCV to process and detect shapes in my images. I'm running into
 
 I think once I punch through this image processing step, the next steps (maybe dimensionality reduction, and then K-means clustering, I think) should be more straightforward.
 
-Maybe try simpler blob detection?
-https://opencv.org/blog/blob-detection-using-opencv/
+
+### Milestone 3:
+- Pipeline from Kamon image -> processed contour
+  - Open Kamon
+  - Thresholding
+    - converting images to greyscale
+    - pixel insenity on 0 to 255 scale, instead of 0 to 30 (as some images were in that format)
+    - add border of 10 pixels around edge
+  - Dilate Kamon to "unite" small lines/shapes into overall contour
+  - Search for contour
+  - Validate contour
+    - Not valid if:
+      - has points touching the edges of the image
+      - larger than 70% of the image area
+      - smaller than 15% of the image area
+    - around ~60% of Kamons pass
+  - KMeans clustering of points for equal length contours
+  - Ordering points clockwise
+  - centering points (this step also scales? I think?)
+
+This process gives me a dataframe with 3000 Kamons and their clusters. KMeans Clustering of these Kamons shows that these Kamon can be grouped into 2-5 cluters (3 clusters gives the highest Balance Score), which can be seen in the Contour_and_KMeans.ipynb notebook. It's hard to tell what the clustering algorithm is picking up on, but observing the results of n=3 clusters, it might be picking up oblong diamond contours, round contours with lumps, and round contours with fewer lumps. 
+
+#### <u>Next Steps</u>:
+  - Alternative methods of extracting features from images?
+    - Lara is using CLIP model to identify features from image-description pairs. I could use the Kamon descriptions along with the image to get new features
+    - Interior contours?
+      - if larger contours are present within the Kamon, could use these as features
+      - as not all Kamon have interior contours, could even add a "interior contour present True/False"
+    - Fine tuning validation process to pick up on Kamon that don't pass muster
+      - maybe decrease how big the largest contour should be 
+      - dialate even more?
+    - Erode Kamon into "chunks" 
+      - some Kamon are made up of more than one shape. Dilating and contouring unites these shapes, but could be interesting to consider the opposite process.  
+  - More ways to process features
+    - PCA of contour data, and then clustering
+    - maybe Classification Network (wk13?)
+  - Further Machine Learning
+    - t-SNE
+    - dive deeper into K-Means
+
