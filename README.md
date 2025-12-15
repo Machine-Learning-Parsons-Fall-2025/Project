@@ -1,10 +1,14 @@
 # Project
 ML Final Project
-Nichos Mol,nar 2025
+Nichos Molnar 2025
+
+# <a href = "https://github.com/Machine-Learning-Parsons-Fall-2025/Project/blob/main/kamon_final_notebook.ipynb">Final Notebook found here: </a>
+
+Presented on 12/15/2025.
+
 
 ## Ideas:
 
-![Kamon Example - Toyotomi Clan](https://github.com/Machine-Learning-Parsons-Fall-2025/Project/blob/14b81d587e6fdb0950bf89d2d09328bee142b381/Kamon_Example.png)
 **Japanese Kamon**:
 - How does an untrained/unfamiliar person view Kamon?
 - Japanese crests/emblem (Kamon) representing individuals or families (historically)
